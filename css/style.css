@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: rgb(230, 233, 236);
+    font-family: Arial;
+}
+
+header{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(161, 161, 161);
+}
+
+header section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header section img{
+    margin-right: 1rem;
+}
+
+input{
+    height: 1.5rem;
+    width: 40rem;
+    background:#ffffff;
+    border-radius: 5px 0px 0px 5px;
+    border:1px solid rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+input:focus, textarea{
+    outline: none !important;
+}
+
+form button{
+    width: 5rem;
+    height: 1.7rem;
+    background: linear-gradient(70deg, rgba(135,229,249,1) 0%, rgba(89,146,219,1) 100%);
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid rgb(255, 255, 255);
+    color:aliceblue;
+    cursor: pointer; 
+    font-size: medium;
+}
+
+form button:active{
+    background:rgb(182, 223, 247);
+}
+
+.searchresult{
+    margin: auto;
+    width: 45rem;
+    
+    border-radius: 10px;
+}
+
+/* Styling på Div för dagens väder */
+#today{
+    background-size: 100% 100%;
+    border-radius: 10px 10px 0px 0px;
+    font-family: Arial;
+    color: white;
+    text-transform: capitalize;
+    height: 650px;
+    padding: 1rem;
+}
+
+#today h3{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.styleTemp{
+    margin: 0vh 0vh 5vh 0vh;
+    font-size: 5rem;
+}
+
+#today img{
+    margin-top: 5vh;
+    filter: drop-shadow(0 0 0.2rem rgb(164, 189, 221));
+}
+
+/* Styling på Div med 5 dagar */
+#fiveDays{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    font-family: Arial;
+}
+
+#fiveDays div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    border-bottom: solid 1px rgb(209, 209, 209);
+    font-size: 15px;
+    color: rgb(136, 135, 135);
+}
+
+.allFiveDays{
+    padding: 1rem;
+    width: 10rem;
+}
+
+#fiveDays img{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+
+
+@media only screen and (max-width: 750px) {
+    /* För mobiler: */
+
+    input{
+        width: 18rem;
+    }
+
+    .searchresult{
+        margin: auto;
+        width: 25rem;
+        
+        border-radius: 10px;
+    }
+
+    #today{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .allFiveDays{
+        padding: 1rem;
+        width: 5rem;
+    }
+}
